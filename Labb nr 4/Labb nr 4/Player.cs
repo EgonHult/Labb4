@@ -8,5 +8,7 @@ namespace Labb_nr_4
 {
     class Player
     {
+        private int steps = 0;
+        private int keys = 0;
     }
 }

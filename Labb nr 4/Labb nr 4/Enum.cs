@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Labb_nr_4
 {
-    class Player
+    public enum MapCharacters
     {
-        public int steps = 0;
-        public int keys = 0; 
+        wall, key , monster, door, exit
     }
+
 }

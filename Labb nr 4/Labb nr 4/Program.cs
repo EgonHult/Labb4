@@ -34,13 +34,18 @@ namespace Labb_nr_4
                 Console.WriteLine();
             }
             int a = map.Length;
-            Console.WriteLine(a);
+           
         }
 
         static void Main(string[] args)
         {
             char[,] map = Map();
             PrintMap(map);
+
+            
+
+            
+
             int key = 0;
             printKeys(key);
             int playerMovements = 0;
@@ -49,7 +54,12 @@ namespace Labb_nr_4
             int playersPositionX = 1;
             int playersPositionY = 1;
             char player = map[playersPositionY, playersPositionX];
+            MovingPlayer(map, ref key, ref playerMovements, ref playersPositionX, ref playersPositionY, player);
+        }
 
+        private static void MovingPlayer(char[,] map, ref int key, ref int playerMovements, ref int playersPositionX,
+            ref int playersPositionY, char player)
+        {
             while (true)
             {
 
@@ -223,6 +233,7 @@ namespace Labb_nr_4
                 }
             }
         }
+
         static void playerMovesUp(char[,] map, int playersPositionY, int playersPositionX, char moveUp, char player)
         {
             map[playersPositionY - 1, playersPositionX] = player;

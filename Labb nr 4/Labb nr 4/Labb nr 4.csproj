@@ -45,7 +45,6 @@
   <ItemGroup>
     <Compile Include="Enum.cs" />
     <Compile Include="Map.cs" />
-    <Compile Include="IMapParts.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

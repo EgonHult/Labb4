@@ -9,7 +9,7 @@ namespace Labb_nr_4
     class Program
     {
 
-        static char[,] Map()
+       /* static char[,] Map()
         {
             char[,] map = new char[8, 22]{{'#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#'},
                                           {'#','@','#','K','#','K','.','.','.','.','.','#','.','.','D','.','#','.','.','.','.','#'},
@@ -35,15 +35,26 @@ namespace Labb_nr_4
             }
             int a = map.Length;
             Console.WriteLine(a);
-        }
+        }*/
 
         static void Main(string[] args)
         {
-            char[,] map = Map();
-            PrintMap(map);
+
+            Map a = new Map();
+
+            a.
+
+            
             
 
-            int playersPositionX = 1;
+           
+            
+            
+            /* char[,] map = Map();
+            PrintMap(map);*/
+            
+
+           /* int playersPositionX = 1;
             int playersPositionY = 1;
             char player = map[playersPositionY, playersPositionX];
 
@@ -107,7 +118,7 @@ namespace Labb_nr_4
                             break;
                     }
                 }
-            }
+            }*/
         }
     }
 }

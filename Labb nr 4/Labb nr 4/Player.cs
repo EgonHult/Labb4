@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 namespace Labb_nr_4
 {
     class Player
-    {
+    {      
         public int steps = 0;
-        public int keys = 0; 
+        public int keys = 0;
     }
 }

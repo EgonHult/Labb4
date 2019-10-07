@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Labb_nr_4
 {
-    public enum MapCharacters
+    interface IInterface
     {
-        Wall, Key , Monster, Door, Exit, Floor
+        char MapPieces { get; set; }
     }
-
 }

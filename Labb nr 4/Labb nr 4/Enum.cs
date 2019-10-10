@@ -8,7 +8,6 @@ namespace Labb_nr_4
 {
     public enum MapCharacters
     {
-        Wall, Key , Monster, Door, Exit, Floor
+        Wall, Key, Monster, Door, Exit, Floor
     }
-
 }

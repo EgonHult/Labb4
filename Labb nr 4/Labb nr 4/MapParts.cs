@@ -6,45 +6,22 @@ using System.Threading.Tasks;
 
 namespace Labb_nr_4
 {
-    public abstract class MapParts : IInterface
+    public abstract class MapParts : IPiece
     {
-        public  abstract  char MapPieces { get; set; }     
-    }
-    class Wall : MapParts
-    {
-        private char part = '#';
-        public override char MapPieces { get => part; set => part = value; }
+        public abstract char MapPiece { get; set; }
+        public abstract void Connect(Player player);
+        public abstract void Connect2(WalkingMonster monster);
+
     }
 
-    class Floor : MapParts
-    {
-        private char part = '.';
-        public override char MapPieces { get => part; set => part = value; }
-    }
 
-    class  Door : MapParts
-    {
-        private char part = 'D';
-        public override char MapPieces { get => part; set => part = value; }
-    }
 
-    class Monster : MapParts
-    {
-        private char part = 'M';
-        public override char MapPieces { get => part; set => part = value; }
-    }
-    class Key : MapParts
-    {
-        private char part = 'K';
 
-        public override char MapPieces { get => part; set => part = value; }
-    }
 
-    class Exit : MapParts
-    {
-        private char part = 'E';
-        public override char MapPieces { get => part; set => part = value; }
-    }
+
+
+
+
 
 }
 

@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Labb_nr_4
 {
-    interface IInterface
+    interface IPiece
     {
-        char MapPieces { get; set; }
+        char MapPiece { get; set; }        
     }
 }

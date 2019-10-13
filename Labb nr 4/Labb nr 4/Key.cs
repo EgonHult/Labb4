@@ -9,7 +9,6 @@ namespace Labb_nr_4
     class Key : MapParts
     {
         private char part = 'K';
-
         public override char MapPiece { get => part; set => part = value; }
 
         private bool picked = false;
@@ -27,7 +26,7 @@ namespace Labb_nr_4
         }
         public override void Connect2(WalkingMonster monster)
         {
-            monster.MoveMonster();
+           
         }
     }
 }

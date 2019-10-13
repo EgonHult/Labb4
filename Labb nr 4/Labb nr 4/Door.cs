@@ -28,16 +28,9 @@ namespace Labb_nr_4
             {
                 player.MovePlayer();
             }
-        }
-        /*  public void Mover(WalkingMonster monster)
-        {
-            monster.MoveMonster();
-        }*/
+        }     
         public override void Connect2(WalkingMonster monster)
-        {
-           
+        {          
         }
-
-
     }
 }

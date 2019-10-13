@@ -17,6 +17,8 @@ namespace Labb_nr_4
         public const int up = 3;
         public const int down = 4;
         public int keys = 0;
+        public string name = string.Empty;
+      
 
         public void MovePlayer()
         {

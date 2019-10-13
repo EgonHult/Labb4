@@ -45,24 +45,24 @@ namespace Labb_nr_4
                 Console.WriteLine($" Nycklar: {player.keys} Steg: {player.step}");
 
                 var key = Console.ReadKey();
-                if (key.Key == ConsoleKey.W)
+                if (key.Key == ConsoleKey.W || key.Key==ConsoleKey.UpArrow)
                 {
                     player.course = Player.up;
                     gameFild[player.y - 1, player.x].Connect(player);
                 }
-                if (key.Key == ConsoleKey.D)
+                if (key.Key == ConsoleKey.D || key.Key == ConsoleKey.RightArrow)
                 {
                     player.course = Player.right;
                     gameFild[player.y, player.x + 1].Connect(player);
                     monster.course = WalkingMonster.right;
                     gameFild[monster.y, monster.x + 1].Connect2(monster);
                 }
-                if (key.Key == ConsoleKey.S)
+                if (key.Key == ConsoleKey.S || key.Key == ConsoleKey.DownArrow)
                 {
                     player.course = Player.down;
                     gameFild[player.y + 1, player.x].Connect(player);
                 }
-                if (key.Key == ConsoleKey.A)
+                if (key.Key == ConsoleKey.A || key.Key == ConsoleKey.LeftArrow)
                 {
                     player.course = Player.left;
                     gameFild[player.y, player.x - 1].Connect(player);

@@ -24,9 +24,5 @@ namespace Labb_nr_4
             }
             player.MovePlayer();
         }
-        public override void Connect2(WalkingMonster monster)
-        {
-           
-        }
     }
 }

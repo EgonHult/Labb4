@@ -13,7 +13,7 @@ namespace Labb_nr_4
 
         private bool beaten = false;
 
-      //  You will always defeat the monster butt the penalty steps can be different
+      //  The player will always defeat the monster butt the penalty steps can be different
         public override void Connect(Player player)
         {
             if (!beaten)
@@ -25,10 +25,6 @@ namespace Labb_nr_4
                 part = '.';
             }          
             player.MovePlayer();
-        }
-        public override void Connect2(WalkingMonster monster)
-        {
-            monster.MoveMonster();
         }
     }
 }

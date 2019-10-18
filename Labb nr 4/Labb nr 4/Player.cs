@@ -19,7 +19,6 @@ namespace Labb_nr_4
         public int keys = 0;
         public string name = string.Empty;
       
-
         public void MovePlayer()
         {
             if (course == right)

@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Labb_nr_4
 {
-    public enum MapCharacters
+    interface IPieceOnMap
     {
-        Wall, Key, Monster, Door, Exit, Floor
+        char MapPiece { get; set; }        
     }
 }

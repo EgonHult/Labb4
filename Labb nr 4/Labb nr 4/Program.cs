@@ -5,8 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Labb_nr_4
-{
-
+{ 
+   //Ville 59 steps
+   // Sara 60 steps
+   // Egon 63 steps
+   
     class Program
     {
         static void PrintGameFild()
@@ -17,9 +20,7 @@ namespace Labb_nr_4
                 for (int x = 0; x < 22; x++)
                 {
                     if (player.x == x && player.y == y)
-                        Console.Write(" @");
-                    //else if (monster.x ==x && monster.y == y)
-                     //  Console.Write(" " + monster.part);
+                        Console.Write(" @");               
                     else
                         Console.Write(" " + gameFild[y, x].MapPiece);
                 }
@@ -28,22 +29,22 @@ namespace Labb_nr_4
         }
         static readonly MapParts[,] gameFild = new MapParts[8, 22];
         static readonly Player player = new Player{ x = 1, y = 1 };
-        static readonly WalkingMonster monster = new WalkingMonster {x = 7, y = 1 };
-       
+        
         static void Main(string[] args)
         {
             Console.WriteLine("Hallå där! Vad är ert namn?");
             player.name = Console.ReadLine();
-      
+            
             Plan();
             bool runGame = true;
             while (runGame)
             {
+               
                 Console.Clear();
                 PrintGameFild();
 
                 Console.WriteLine($" Nycklar: {player.keys} Steg: {player.step}");
-
+                            
                 var key = Console.ReadKey();
                 if (key.Key == ConsoleKey.W || key.Key==ConsoleKey.UpArrow)
                 {
@@ -53,9 +54,7 @@ namespace Labb_nr_4
                 if (key.Key == ConsoleKey.D || key.Key == ConsoleKey.RightArrow)
                 {
                     player.course = Player.right;
-                    gameFild[player.y, player.x + 1].Connect(player);
-                    monster.course = WalkingMonster.right;
-                    gameFild[monster.y, monster.x + 1].Connect2(monster);
+                    gameFild[player.y, player.x + 1].Connect(player);                 
                 }
                 if (key.Key == ConsoleKey.S || key.Key == ConsoleKey.DownArrow)
                 {
@@ -66,7 +65,8 @@ namespace Labb_nr_4
                 {
                     player.course = Player.left;
                     gameFild[player.y, player.x - 1].Connect(player);
-                }                            
+                }
+           
             }
         }
             static void Plan()
@@ -101,7 +101,7 @@ namespace Labb_nr_4
                 gameFild[1, 4] = new Wall();
                 gameFild[1, 5] = new Key();
                 gameFild[1, 6] = new Floor();
-                gameFild[1, 7] = 
+                gameFild[1, 7] = new Floor();
                 gameFild[1, 8] = new Floor();
                 gameFild[1, 9] = new Floor();
                 gameFild[1, 10] = new Floor();
@@ -254,17 +254,15 @@ namespace Labb_nr_4
                 gameFild[7, 19] = new Wall();
                 gameFild[7, 20] = new Wall();
                 gameFild[7, 21] = new Wall();
-            }
-            /* static char[,] Map()
-        {                               //  0   1   2  3   4   5   6   7   8   9   10  11  12  13  14  15  16  17  18  19   20  21
-            char[,] map = new char[8, 22]{{'#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#'},
+            }                              
+                                        /*   0   1   2  3   4   5   6   7   8   9   10  11  12  13  14  15  16  17  18  19   20  21
+                                          {'#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#'},
                                           {'#','@','#','K','#','K','.','.','.','.','.','#','.','D','.','.','.','.','.','D','.','#'},
                                           {'#','.','#','.','#','.','.','#','.','#','.','#','.','#','#','#','#','#','#','#','E','#'},
                                           {'#','.','#','.','#','.','.','#','.','#','.','#','.','#','.','.','.','#','#','#','.','#'},
                                           {'#','.','#','.','#','.','#','.','.','M','K','#','.','#','.','#','.','#','.','#','.','#'},
                                           {'#','.','#','.','#','.','#','#','.','#','#','#','.','#','.','#','.','#','.','#','.','#'},
                                           {'#','.','.','.','.','.','K','#','.','.','D','D','.','M','D','#','.','.','.','.','.','#'},
-                                          {'#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#'} };*/
-         
+                                          {'#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#','#'} */         
     }
 }
